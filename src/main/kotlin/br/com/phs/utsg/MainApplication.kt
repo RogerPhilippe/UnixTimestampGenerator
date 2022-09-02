@@ -44,17 +44,6 @@ class MainApplication(args: Array<String>) {
                         { showTimestamp(it.toString()) },
                         { JOptionPane.showMessageDialog(null, it) }
                     )
-
-                    if (content.isNullOrEmpty() || content.filter { it == ';' }.length != 2) {
-                        JOptionPane.showMessageDialog(null, "Erro na etrada dos dados!")
-                    } else {
-                        val timestamp = generateDateTimestamp(content)
-                        if (timestamp <= 0) {
-                            JOptionPane.showMessageDialog(null, "Erro no retorno do timestamp!")
-                        } else {
-                            showTimestamp(timestamp.toString())
-                        }
-                    }
                 }
             }
         }
