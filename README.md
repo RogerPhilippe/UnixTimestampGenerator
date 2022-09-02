@@ -4,6 +4,7 @@
 ## Parâmetro -cli executa em modo texto
 
 ## Executar script start
+### Script start dentro pasta dist
 bash start -Parâmetro
 
 ## Criar atalho pasta binário do usuário
