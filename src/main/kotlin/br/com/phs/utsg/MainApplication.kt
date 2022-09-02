@@ -4,6 +4,7 @@ import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
 import java.util.*
 import javax.swing.JOptionPane
+import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
     MainApplication(args)
@@ -75,7 +76,7 @@ class MainApplication(args: Array<String>) {
                     }
                 )
             }
-            "quit" -> { }
+            "quit" -> { exitProcess(0) }
             else -> {
                 println("Command $cmd não é um comando válido!")
                 cli()
@@ -90,7 +91,7 @@ class MainApplication(args: Array<String>) {
 
     private fun generateDateTimestamp(dayMonthYear: String): Long {
         val (day, month, year) = dayMonthYear.split(";")
-        val calendar = Calendar.getInstance()
+        val calendar = Calendar.getInstance(Locale.getDefault())
         try {
             calendar.set(year.toInt(), (month.toInt()+1), day.toInt())
         } catch (ex: Exception) {
