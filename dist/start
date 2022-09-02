@@ -1,0 +1,4 @@
+#! /bin/bash
+
+cd /home/rphilippe/DevEnv/Tools/UnixTimestampGen/
+java -jar UnixTimeStempGenerator.jar $1
