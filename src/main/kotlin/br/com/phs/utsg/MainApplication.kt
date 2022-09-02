@@ -18,6 +18,8 @@ class MainApplication(args: Array<String>) {
             gui()
         } else if (args.first() == "-cli") {
             cli()
+        } else {
+            exitProcess(127)
         }
 
     }
